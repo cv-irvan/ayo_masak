@@ -152,6 +152,7 @@ class FontPutih {
   final TextStyle p1 = GoogleFonts.inter(fontSize: 17, color: Warna.putih);
   final TextStyle p2 = GoogleFonts.inter(fontSize: 15, color: Warna.putih);
   final TextStyle s = GoogleFonts.inter(fontSize: 12, color: Warna.putih);
+  final TextStyle s1 = GoogleFonts.inter(fontSize: 9, color: Warna.putih);
 }
 
 class FontHijau {

@@ -20,10 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 30, 20, 10),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       stories,
-                      style: fontM.h2,
+                      style: fontM.h1,
                     ),
                     Image(
                       width: 20,
@@ -48,13 +49,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                   separatorBuilder: (context, i) {
-                    return Container(
-                      width: 110,
-                      decoration: BoxDecoration(
-                        color: Warna.outline,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    );
+                    return const StoriesItem();
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+                child: Text(
+                  trend,
+                  style: fontM.h1,
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 2 / 3,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20),
+                  itemCount: 50,
+                  itemBuilder: (BuildContext ctx, index) {
+                    return const ProductFoodItem();
                   },
                 ),
               ),

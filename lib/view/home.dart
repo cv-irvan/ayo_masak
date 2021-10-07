@@ -12,18 +12,10 @@ class _HomeState extends State<Home> {
 
   List lScreen = [
     const HomeScreen(),
-    Container(
-      color: Warna.pri,
-    ),
-    Container(
-      color: Warna.putih,
-    ),
-    Container(
-      color: Warna.sec,
-    ),
-    Container(
-      color: Warna.priText,
-    ),
+    const SearchScreen(),
+    const UploadScreen(),
+    const NotifScreen(),
+    const ProfilScreen(),
   ];
 
   List<Widget> bIcon = [
@@ -43,7 +35,14 @@ class _HomeState extends State<Home> {
         color: Warna.priText,
       ),
     ),
-    const SizedBox(),
+    Image(
+      width: 30,
+      height: 30,
+      image: Svg(
+        'assets/ic/circle-plus.svg',
+        color: Warna.priText,
+      ),
+    ),
     Image(
       width: 30,
       height: 30,
@@ -75,7 +74,6 @@ class _HomeState extends State<Home> {
         child: lScreen.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
         child: Container(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           height: 70,
@@ -103,19 +101,6 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Warna.putih,
-        onPressed: () {},
-        child: Image(
-          width: 30,
-          height: 30,
-          image: Svg(
-            'assets/ic/plus.svg',
-            color: Warna.priText,
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

@@ -8,6 +8,9 @@ class TextInput extends StatelessWidget {
     this.icon,
     this.hint,
     this.passwordtype,
+    this.fill,
+    this.fillColor,
+    this.isDense,
   }) : super(key: key);
 
   final EdgeInsets? margin;
@@ -15,6 +18,9 @@ class TextInput extends StatelessWidget {
   final Widget? icon;
   final String? hint;
   final bool? passwordtype;
+  final bool? fill;
+  final bool? isDense;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +30,56 @@ class TextInput extends StatelessWidget {
         obscureText: passwordtype ?? false,
         controller: controller,
         decoration: InputDecoration(
+          isDense: isDense,
           hintText: hint,
           hintStyle: fontS.p1,
           prefixIcon: icon,
+          filled: fill,
+          fillColor: fillColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide(
+              color: Warna.outline,
+              width: 2,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide(
+              color: Warna.pri,
+              width: 2,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class TextInputDesc extends StatelessWidget {
+  const TextInputDesc({
+    Key? key,
+    this.margin,
+    this.controller,
+    this.hint,
+  }) : super(key: key);
+
+  final EdgeInsets? margin;
+  final TextEditingController? controller;
+  final String? hint;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: margin,
+      child: TextFormField(
+        controller: controller,
+        maxLines: 4,
+        decoration: InputDecoration(
+          hintText: enterdesciption,
+          hintStyle: fontS.p1,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide(
               color: Warna.outline,
               width: 2,

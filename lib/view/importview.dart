@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -11,3 +12,7 @@ part 'into.dart';
 part 'register.dart';
 part 'otp.dart';
 part 'homescreen.dart';
+part 'searchscreen.dart';
+part 'notifscreen.dart';
+part 'profilscreen.dart';
+part 'uploadscreen.dart';

@@ -117,6 +117,8 @@ class AppThemeData {
 }
 
 class FontMain {
+  final TextStyle f34 = GoogleFonts.inter(
+      fontSize: 32, fontWeight: FontWeight.w600, color: Warna.priText);
   final TextStyle h1 = GoogleFonts.inter(
       fontSize: 22, fontWeight: FontWeight.w600, color: Warna.priText);
   final TextStyle h2 = GoogleFonts.inter(
@@ -151,3 +153,20 @@ class FontPutih {
   final TextStyle p2 = GoogleFonts.inter(fontSize: 15, color: Warna.putih);
   final TextStyle s = GoogleFonts.inter(fontSize: 12, color: Warna.putih);
 }
+
+class FontHijau {
+  final TextStyle h1 = GoogleFonts.inter(
+      fontSize: 22, fontWeight: FontWeight.w600, color: Warna.pri);
+  final TextStyle h2 = GoogleFonts.inter(
+      fontSize: 17, fontWeight: FontWeight.w600, color: Warna.pri);
+  final TextStyle h3 = GoogleFonts.inter(
+      fontSize: 15, fontWeight: FontWeight.w600, color: Warna.pri);
+  final TextStyle p1 = GoogleFonts.inter(fontSize: 17, color: Warna.pri);
+  final TextStyle p2 = GoogleFonts.inter(fontSize: 15, color: Warna.pri);
+  final TextStyle s = GoogleFonts.inter(fontSize: 12, color: Warna.pri);
+}
+
+var fontM = FontMain();
+var fontS = FontSec();
+var fontP = FontPutih();
+var fontH = FontHijau();

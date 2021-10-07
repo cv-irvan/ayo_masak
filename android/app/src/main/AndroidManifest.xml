@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ayo_masak">
+    package="com.ayomasak">
    <application
         android:label="ayo_masak"
         android:icon="@mipmap/ic_launcher">

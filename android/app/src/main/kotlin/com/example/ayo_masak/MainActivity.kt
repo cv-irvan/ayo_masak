@@ -1,4 +1,4 @@
-package com.example.ayo_masak
+package com.ayomasak
 
 import io.flutter.embedding.android.FlutterActivity
 

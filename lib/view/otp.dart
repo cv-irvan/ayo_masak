@@ -23,43 +23,61 @@ class _OtpState extends State<Otp> {
             const SizedBox(
               height: 100,
             ),
-            Text(
-              cekyouremail,
-              style: fontM.h1,
+            FadeInDown(
+              duration: const Duration(milliseconds: 500),
+              child: Text(
+                cekyouremail,
+                style: fontM.h1,
+              ),
             ),
             const SizedBox(
               height: 20,
             ),
-            Text(
-              ayomasaksentcodetoemail,
-              style: fontS.p2,
+            FadeInDown(
+              duration: const Duration(milliseconds: 600),
+              child: Text(
+                ayomasaksentcodetoemail,
+                style: fontS.p2,
+              ),
             ),
             const SizedBox(
               height: 25,
             ),
-            OtpForm(
-                textEditingController: textEditingController,
-                formKey: formKey,
-                currentText: currentText,
-                error: hasError),
+            FadeInDown(
+              duration: const Duration(milliseconds: 700),
+              child: OtpForm(
+                  textEditingController: textEditingController,
+                  formKey: formKey,
+                  currentText: currentText,
+                  error: hasError),
+            ),
             const Spacer(),
-            Text(
-              codeexpiredon + '03:12',
-              style: fontM.p2,
+            FadeInDown(
+              duration: const Duration(milliseconds: 800),
+              child: Text(
+                codeexpiredon + '03:12',
+                style: fontM.p2,
+              ),
             ),
-            Btn(
-              margin: const EdgeInsets.all(20),
-              fontstyle: fontP.h3,
-              text: verify,
-              ontap: () {
-                Get.to(() => const Home());
-              },
+            FadeInDown(
+              duration: const Duration(milliseconds: 900),
+              child: Btn(
+                margin: const EdgeInsets.all(20),
+                fontstyle: fontP.h3,
+                text: verify,
+                ontap: () {
+                  Get.to(() => const Home());
+                },
+              ),
             ),
-            Btn(
-              margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-              fontstyle: fontP.h3,
-              text: sendagain,
-              color: Warna.sec,
+            FadeInDown(
+              duration: const Duration(milliseconds: 1000),
+              child: Btn(
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                fontstyle: fontP.h3,
+                text: sendagain,
+                color: Warna.sec,
+              ),
             ),
             const SizedBox(
               height: 20,

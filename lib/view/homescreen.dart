@@ -49,7 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                   separatorBuilder: (context, i) {
-                    return const StoriesItem();
+                    return FadeInDown(
+                        duration: Duration(milliseconds: (i + 1) * 300),
+                        child: const StoriesItem());
                   },
                 ),
               ),
@@ -70,9 +72,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       childAspectRatio: 2 / 3,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20),
-                  itemCount: 50,
+                  itemCount: 15,
                   itemBuilder: (BuildContext ctx, index) {
-                    return const ProductFoodItem();
+                    return FadeInDown(
+                        duration: Duration(milliseconds: (index + 1) * 300),
+                        child: const ProductFoodItem());
                   },
                 ),
               ),

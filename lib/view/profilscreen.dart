@@ -59,47 +59,56 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            d15,
-                            style: fontM.h2,
-                          ),
-                          Text(
-                            recipes,
-                            style: fontS.s,
-                          ),
-                        ],
+                      FadeInDown(
+                        duration: const Duration(milliseconds: 500),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              d15,
+                              style: fontM.h2,
+                            ),
+                            Text(
+                              recipes,
+                              style: fontS.s,
+                            ),
+                          ],
+                        ),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            d782,
-                            style: fontM.h2,
-                          ),
-                          Text(
-                            following,
-                            style: fontS.s,
-                          ),
-                        ],
+                      FadeInDown(
+                        duration: const Duration(milliseconds: 600),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              d782,
+                              style: fontM.h2,
+                            ),
+                            Text(
+                              following,
+                              style: fontS.s,
+                            ),
+                          ],
+                        ),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            d1852,
-                            style: fontM.h2,
-                          ),
-                          Text(
-                            follower,
-                            style: fontS.s,
-                          ),
-                        ],
+                      FadeInDown(
+                        duration: const Duration(milliseconds: 700),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              d1852,
+                              style: fontM.h2,
+                            ),
+                            Text(
+                              follower,
+                              style: fontS.s,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   )
@@ -129,7 +138,9 @@ class _ProfilScreenState extends State<ProfilScreen> {
                     mainAxisSpacing: 20),
                 itemCount: 15,
                 itemBuilder: (BuildContext ctx, index) {
-                  return const ProductFoodItem();
+                  return FadeInDown(
+                      duration: Duration(milliseconds: (index + 1) * 300),
+                      child: const ProductFoodItem());
                 },
               ),
             ),

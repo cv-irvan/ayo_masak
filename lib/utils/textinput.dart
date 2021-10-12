@@ -121,7 +121,7 @@ class _OtpFormState extends State<OtpForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: widget().formKey,
+      key: widget.formKey,
       child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
           child: PinCodeTextField(
@@ -145,7 +145,7 @@ class _OtpFormState extends State<OtpForm> {
               borderRadius: BorderRadius.circular(20),
               fieldHeight: 80,
               fieldWidth: 80,
-              activeFillColor: widget().error ? Colors.white : Colors.white,
+              activeFillColor: widget.error ? Colors.white : Colors.white,
               activeColor: Warna.outline,
               selectedFillColor: Colors.white,
               selectedColor: Warna.pri,
@@ -155,15 +155,15 @@ class _OtpFormState extends State<OtpForm> {
             cursorColor: Warna.outline,
             animationDuration: const Duration(milliseconds: 300),
             enableActiveFill: true,
-            controller: widget().textEditingController,
+            controller: widget.textEditingController,
             keyboardType: TextInputType.number,
             textStyle: fontM.f34,
             onCompleted: (v) {
-              widget().formKey.currentState!.validate();
+              widget.formKey.currentState!.validate();
             },
             onChanged: (value) {
               setState(() {
-                widget().currentText = value;
+                widget.currentText = value;
               });
             },
             beforeTextPaste: (text) {

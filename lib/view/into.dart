@@ -13,35 +13,47 @@ class _IntoState extends State<Into> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            margin: const EdgeInsets.only(top: 25),
-            width: Get.width,
-            child: Image.asset(
-              'assets/img/bg_into.png',
-              fit: BoxFit.cover,
+          FadeInDown(
+            duration: const Duration(milliseconds: 500),
+            child: Container(
+              margin: const EdgeInsets.only(top: 25),
+              width: Get.width,
+              child: Image.asset(
+                'assets/img/bg_into.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           const Spacer(),
-          Text(
-            startcooking,
-            style: fontM.h1,
+          FadeInDown(
+            duration: const Duration(milliseconds: 600),
+            child: Text(
+              startcooking,
+              style: fontM.h1,
+            ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Text(
-            letsjoinour,
-            textAlign: TextAlign.center,
-            style: fontS.p1,
+          FadeInDown(
+            duration: const Duration(milliseconds: 700),
+            child: Text(
+              letsjoinour,
+              textAlign: TextAlign.center,
+              style: fontS.p1,
+            ),
           ),
           const Spacer(),
-          Btn(
-            text: getstarted,
-            fontstyle: fontP.h3,
-            margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            ontap: () {
-              Get.to(() => const Register());
-            },
+          FadeInDown(
+            duration: const Duration(milliseconds: 800),
+            child: Btn(
+              text: getstarted,
+              fontstyle: fontP.h3,
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              ontap: () {
+                Get.to(() => const Register());
+              },
+            ),
           ),
           const Spacer(),
         ],

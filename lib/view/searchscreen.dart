@@ -60,39 +60,42 @@ class _SearchScreenState extends State<SearchScreen> {
             height: 10,
             color: Warna.outline.withOpacity(0.5),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Image(
-                      width: 30,
-                      height: 30,
-                      image: Svg(
-                        'assets/ic/history.svg',
-                        color: Warna.secText,
+          FadeInDown(
+            duration: const Duration(milliseconds: 500),
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Image(
+                        width: 30,
+                        height: 30,
+                        image: Svg(
+                          'assets/ic/history.svg',
+                          color: Warna.secText,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      namafood,
-                      style: fontM.p1,
-                    ),
-                    const Spacer(),
-                    Image(
-                      width: 30,
-                      height: 30,
-                      image: Svg(
-                        'assets/ic/arrow-up-left.svg',
-                        color: Warna.secText,
+                      const SizedBox(
+                        width: 20,
                       ),
-                    ),
-                  ],
-                )
-              ],
+                      Text(
+                        namafood,
+                        style: fontM.p1,
+                      ),
+                      const Spacer(),
+                      Image(
+                        width: 30,
+                        height: 30,
+                        image: Svg(
+                          'assets/ic/arrow-up-left.svg',
+                          color: Warna.secText,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
           Container(
@@ -111,14 +114,17 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Wrap(
               children: sugest
                   .map(
-                    (data) => Container(
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      margin: const EdgeInsets.fromLTRB(0, 0, 15, 15),
-                      decoration: BoxDecoration(
-                        color: Warna.outline,
-                        borderRadius: BorderRadius.circular(100),
+                    (data) => FadeInDown(
+                      duration: Duration(milliseconds: (data.length + 1) * 100),
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        margin: const EdgeInsets.fromLTRB(0, 0, 15, 15),
+                        decoration: BoxDecoration(
+                          color: Warna.outline,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Text(data),
                       ),
-                      child: Text(data),
                     ),
                   )
                   .toList(),

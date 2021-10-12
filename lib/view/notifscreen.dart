@@ -32,54 +32,57 @@ class _NotifScreenState extends State<NotifScreen> {
                 );
               },
               separatorBuilder: (context, i) {
-                return Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Warna.outline,
-                          shape: BoxShape.circle,
-                          image: const DecorationImage(
-                            image: NetworkImage(imgprofil),
-                            fit: BoxFit.cover,
+                return FadeInRight(
+                  duration: Duration(milliseconds: (i + 1) * 300),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            color: Warna.outline,
+                            shape: BoxShape.circle,
+                            image: const DecorationImage(
+                              image: NetworkImage(imgprofil),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            dnama,
-                            style: fontM.h3,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            followingyou,
-                            style: fontS.s,
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-                      SizedBox(
-                        width: 100,
-                        height: 40,
-                        child: Btn(
-                          fontstyle: fontP.h3,
-                          text: 'Follow',
-                          ontap: () {},
+                        const SizedBox(
+                          width: 20,
                         ),
-                      ),
-                    ],
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              dnama,
+                              style: fontM.h3,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              followingyou,
+                              style: fontS.s,
+                            ),
+                          ],
+                        ),
+                        const Spacer(),
+                        SizedBox(
+                          width: 100,
+                          height: 40,
+                          child: Btn(
+                            fontstyle: fontP.h3,
+                            text: 'Follow',
+                            ontap: () {},
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
